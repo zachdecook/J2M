@@ -196,7 +196,7 @@
 		input = input.replace(/!\[([^\]\n]+)\]\(([^)\n\s]+)\)/g, '!$2|alt=$1!');
 		
 		input = input.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1|$2]');
-		input = input.replace(/<([^>]+)>/g, '[$1]');
+		input = input.replace(/<([^> ]+:[^> ]+)>/g, '[$1]');
 
 		// restore extracted sections
 		for(var i =0; i < replacementsList.length; i++){
